@@ -5,3 +5,8 @@ body {
 #code {
     text-align: center;
 }
+
+#question, #responses {
+    text-align: center;
+    padding: 100px;
+}
