@@ -1,15 +1,3 @@
-// lsit of questions
-// var questions = [
-// question 1
-// question 2
-// question 3
-// question 4
-// ]
-
-// an array
-
-// iterate 
-
 
 /*
     HTML REFERENCE
