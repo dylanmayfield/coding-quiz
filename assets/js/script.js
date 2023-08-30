@@ -60,4 +60,4 @@ var questions = [
     }
   }
 
-
+console.log(questionElement)
