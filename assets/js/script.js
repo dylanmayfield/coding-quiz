@@ -1,14 +1,7 @@
 
-/*
-    HTML REFERENCE
-    <p id="question"></p>
-    <ul id="responses"></ul>
-*/
-var next = carousel.querySelector('#next');
-var index = 0
 var questionElement = document.querySelector("#question");
 var responseElement = document.querySelector("#responses");
-var currentQuestion;
+
 // Generate your data/carousel
 var questions = [
     { question: "What is a function", responses: [ "Resuable code", "Primitive value", "None of the above" ], answer: 0 },
@@ -37,13 +30,13 @@ var questions = [
     renderQuestion();
     // render the anser
     renderAnswers();
-  }
+  };
   
   // renders the question
   function renderQuestion() {
     // Update the html with the current question
     questionElement.textContent = questions[index].question;
-  }
+  };
   
   function renderAnswers() {
     console.log("questions object",questions[index]);
@@ -56,6 +49,6 @@ var questions = [
       li.textContent = questions[index].responses[i];
       questionResponseElement.appendChild(li);
     }
-  }
+  };
 
 
