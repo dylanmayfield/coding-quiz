@@ -1,5 +1,10 @@
 body {
     background-color: rgb(93, 168, 168);
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
 }
 
 #code {
@@ -8,6 +13,7 @@ body {
 
 #question-box {
     background-color: rgb(4, 90, 107);
+    padding-bottom: 200px;
 }
 
 #question, #responses {
@@ -16,10 +22,9 @@ body {
 }
 
 .next {
-    position: relative;
     border-radius: 10px;
-    left: 425px;
     width: 200px;
     height: 50px;
     background-color: aquamarine;
+    font-weight: bold;
 }
