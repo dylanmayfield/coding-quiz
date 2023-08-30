@@ -4,9 +4,11 @@
     <p id="question"></p>
     <ul id="responses"></ul>
 */
-
+var next = carousel.querySelector('#next');
+var index = 0
 var questionElement = document.querySelector("#question");
 var responseElement = document.querySelector("#responses");
+var currentQuestion;
 // Generate your data/carousel
 var questions = [
     { question: "What is a function", responses: [ "Resuable code", "Primitive value", "None of the above" ], answer: 0 },
@@ -29,6 +31,7 @@ var questions = [
     } else if (index > images.length - 1) { 
       index = 0;
     }
+
    
     // Render the question
     renderQuestion();
