@@ -37,7 +37,7 @@ var questions = [
    
     // Render the question
     renderQuestion();
-    // render the anser
+    // render the answer
     renderAnswers();
   }
   
