@@ -1,6 +1,9 @@
-
+var carousel = document.querySelector("#question-box");
+var next = carousel.querySelector(".next"); 
 var questionElement = document.querySelector("#question");
 var responseElement = document.querySelector("#responses");
+var index = 0;
+var currentQuestion;
 
 // Generate your data/carousel
 var questions = [
@@ -9,8 +12,7 @@ var questions = [
     { question: "What is a primitive value ", responses: [ "123", "1234", "None of the above" ], answer: 2 },
     { question: "What is the abbreviation JSON", responses: [ "JASON", "Javascript notation object", "None of the above" ], answer: 1 },
   ];
-  
-  
+
   // Navigate through list of questions
   function navigate(direction) {
     index = index + direction;
@@ -31,8 +33,8 @@ var questions = [
     // render the anser
     renderAnswers();
   };
-  
-  // renders the question
+
+    // renders the question
   function renderQuestion() {
     // Update the html with the current question
     questionElement.textContent = questions[index].question;
