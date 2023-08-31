@@ -40,6 +40,8 @@ var questions = [
     // render the answer
     renderAnswers();
   }
+    infoEl.appendChild("");
+    body.appendChild(favoriteEl);
   
   // renders the question
   function renderQuestion() {
