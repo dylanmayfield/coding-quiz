@@ -1,17 +1,14 @@
-/*
-    CODE EXAMPLE FOR MODULE 4:
-    - REFERENCE activity 18 for how you get list of questions to render
-    - Replace navigate method with version below.
-*/
 
-/*
-    HTML REFERENCE
-    <p id="question"></p>
-    <ul id="responses"></ul>
-*/
 
 var questionElement = document.querySelector("#question");
-var responseElement = document.querySelector("#responses");
+var reponsesElement = document.querySelector("#answer-buttons");
+var nextElement = document.querySelector("#next");
+var startButton = document.querySelector('#startbutton');
+
+var questionIndex = 0;
+var score = 0;
+
+
 // Generate your data/carousel
 var questions = [
     { question: "What is a function", responses: [ "Resuable code", "Primitive value", "None of the above" ], answer: 0 },
@@ -19,6 +16,30 @@ var questions = [
     { question: "What is a primitive value ", responses: [ "123", "1234", "None of the above" ], answer: 2 },
     { question: "What is the abbreviation JSON", responses: [ "JASON", "Javascript notation object", "None of the above" ], answer: 1 },
   ];
+
+
+function startQuiz() {
+    questionIndex = 0;
+    score = 0;
+    startButton.innerHTML = "Start Quiz";
+    showQuestion();
+}
+
+function showQuestion(){
+    var currentQuestion = questions[questionIndex];
+    var questionNo = questionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(responsesElement => {
+        var button = document.createElement('button');
+        button.innerHTML = answer.text;
+        button.classList.add('btn')
+        responsesElement.appendChild('button');
+        
+    });
+}
+startQuiz();
+
   
   
   // Navigate through list of questions
@@ -40,8 +61,7 @@ var questions = [
     // render the answer
     renderAnswers();
   }
-    infoEl.appendChild("");
-    body.appendChild(favoriteEl);
+    
   
   // renders the question
   function renderQuestion() {

@@ -25,7 +25,7 @@ h1 {
     padding: 10px;
 }
 
-.next, .startbutton {
+#next, #startbutton {
     border-radius: 10px;
     box-shadow: 5px 5px;
     width: 200px;
