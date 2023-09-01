@@ -10,7 +10,7 @@ var score = document.querySelector("#score");
 
 var questionIndex = 0;
 var score = 0;
-var secondsLeft = 25
+var secondsLeft = 60
 
 
 var questions = [
@@ -27,7 +27,7 @@ function startQuiz() {
     startButton.innerHTML = "Start Quiz";
     questionBox.classList.add("hide");
     quizArea.classList.remove("hide");
-    timer.classList.add("hide");
+    timer.classList.remove("hide");
     showQuestion();
     setTime();
   }
@@ -36,7 +36,13 @@ function setTime() {
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timer.textContent = secondsLeft + " Seconds Remaining.";
-  });
+
+    if(secondsLeft === 0) {
+      clearInterval(timerInterval);
+      sendMessage();
+    }
+
+  }, 1000);
 }
 
 
