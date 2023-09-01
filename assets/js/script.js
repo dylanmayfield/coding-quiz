@@ -5,12 +5,12 @@ var responsesElement = document.querySelector("#answer-buttons");
 var questionBox = document.querySelector("#question-box");
 var startButton = document.querySelector("#startbutton");
 var quizArea = document.querySelector("#quiz-area");
+var timer = document.querySelector("#timer");
 
 var questionIndex = 0;
 var score = 0;
 
 
-// Generate your data/carousel
 var questions = [
     { question: "What is a function", responses: [ "Resuable code", "Primitive value", "None of the above" ], answer: "Resuable code" },
     { question: "What is an array", responses: [ "List of values", "Key value pairs", "None of the above" ], answer: "List of values" },
@@ -24,7 +24,8 @@ function startQuiz() {
     score = 0;
     startButton.innerHTML = "Start Quiz";
     questionBox.classList.add("hide");
-    quizArea.classList.remove("hide")
+    quizArea.classList.remove("hide");
+    timer.classList.add("hide");
     showQuestion();
 }
 
