@@ -18,7 +18,7 @@ var questions = [
     { question: "What is an array", responses: [ "List of values", "Key value pairs", "None of the above" ], answer: "List of values" },
     { question: "What is a primitive value ", responses: [ "123", "1234", "None of the above" ], answer: "123" },
     { question: "What is the abbreviation JSON", responses: [ "JASON", "Javascript notation object", "None of the above" ], answer: "JASON" },
-  ];
+  ]
 
 
 function startQuiz() {
@@ -30,15 +30,16 @@ function startQuiz() {
     timer.classList.add("hide");
     showQuestion();
     setTime();
-}
+  }
 
 function setTime() {
-  // Sets interval in variable
   var timerInterval = setInterval(function() {
     secondsLeft--;
+    timer.textContent = secondsLeft + " Seconds Remaining.";
   });
 }
-  
+
+
 
 function showQuestion() {
     var currentQuestion = questions[questionIndex];

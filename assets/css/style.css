@@ -22,7 +22,8 @@ h1 {
     text-align: center;
 }
 
-#question-box {
+
+#question-box, #quiz-area {
     background-color: rgb(4, 90, 107);
     padding-bottom: 200px;
     border-radius: 10px;
@@ -55,4 +56,9 @@ h1 {
     border-radius: 10px;
     box-shadow: 5px 5px;
     cursor: pointer;
+}
+
+#timer {
+    background-color: rgb(4, 90, 107); 
+    font-size: 300px;
 }
