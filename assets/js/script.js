@@ -39,7 +39,6 @@ function setTime() {
 
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
-      sendMessage();
     }
 
   }, 1000);
@@ -74,10 +73,20 @@ console.log(event.target.innerHTML);
 var userChoice = event.target.innerHTML;
 var correctAnswer = questions[questionIndex].answer;
 if (userChoice === correctAnswer) {
+  alert("Correct")
   nextQuestion()
 } else {
-  alert("wrong")
+  alert("Incorrect")
+  secondsLeft = secondsLeft - 10;
+  nextQuestion()
+} 
 }
+
+function getScore() {
+  if (userChoice !== correctAnswer) {
+    
+  }
+
 }
 
 startButton.addEventListener("click", startQuiz);
