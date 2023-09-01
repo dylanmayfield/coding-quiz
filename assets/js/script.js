@@ -10,6 +10,7 @@ var score = document.querySelector("#score");
 
 var questionIndex = 0;
 var score = 0;
+var secondsLeft = 25
 
 
 var questions = [
@@ -28,7 +29,16 @@ function startQuiz() {
     quizArea.classList.remove("hide");
     timer.classList.add("hide");
     showQuestion();
+    setTime();
 }
+
+function setTime() {
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+  });
+}
+  
 
 function showQuestion() {
     var currentQuestion = questions[questionIndex];
@@ -50,6 +60,7 @@ function nextQuestion() {
   questionIndex = questionIndex + 1;
   showQuestion();
 }
+
 function checkAnswer(event) {
 console.log(event);
 console.log(event.target.innerHTML);
@@ -61,6 +72,7 @@ if (userChoice === correctAnswer) {
   alert("Wrong");
 }
 }
+
 startButton.addEventListener("click", startQuiz);
 
 
