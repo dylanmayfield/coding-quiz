@@ -14,10 +14,10 @@ var secondsLeft = 60
 
 
 var questions = [
-    { question: "What is a function", responses: [ "Resuable code", "Primitive value", "None of the above" ], answer: "Resuable code" },
-    { question: "What is an array", responses: [ "List of values", "Key value pairs", "None of the above" ], answer: "List of values" },
-    { question: "What is a primitive value ", responses: [ "123", "1234", "None of the above" ], answer: "123" },
-    { question: "What is the abbreviation JSON", responses: [ "JASON", "Javascript notation object", "None of the above" ], answer: "JASON" },
+    { question: "What does the abbreviation HTML represent?", responses: [ "Hot Tamales", "Primitive value", "Hypertext Markup Language" ], answer: "Hypertext Markup Language" },
+    { question: "What is a string used for? ", responses: [ "Storing and manipulating text", "Key value pairs", "None of the above" ], answer: "Storing and manipulating text" },
+    { question: "What does the abbreviation CSS represent? ", responses: [ "Code Site Server", "Code Style Sheets", "Cascading Style Sheets" ], answer: "Cascading Style Sheets" },
+    { question: "What is the abbreviation JSON", responses: [ "JASON", "Javascript Object Notation", "Jason's Son" ], answer: "Javascript Object Notation" },
   ]
 
 
@@ -76,7 +76,7 @@ var correctAnswer = questions[questionIndex].answer;
 if (userChoice === correctAnswer) {
   nextQuestion()
 } else {
-  alert("Wrong");
+  alert("wrong")
 }
 }
 
