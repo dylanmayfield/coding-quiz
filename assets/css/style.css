@@ -16,6 +16,7 @@ h1 {
 .show {
     display: block;
 }
+
 #code {
     text-align: center;
 }
@@ -32,7 +33,7 @@ h1 {
     font-size: 30px;
 }
 
-#next, #startbutton {
+#startbutton {
     border-radius: 10px;
     box-shadow: 5px 5px;
     width: 200px;

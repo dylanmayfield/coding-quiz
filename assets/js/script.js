@@ -6,6 +6,7 @@ var questionBox = document.querySelector("#question-box");
 var startButton = document.querySelector("#startbutton");
 var quizArea = document.querySelector("#quiz-area");
 var timer = document.querySelector("#timer");
+var score = document.querySelector("#score");
 
 var questionIndex = 0;
 var score = 0;
