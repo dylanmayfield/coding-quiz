@@ -41,6 +41,10 @@ function setTime() {
       clearInterval(timerInterval);
     }
 
+    if (secondsLeft === 0) {
+      quizArea.classList.add("hide");
+    }
+
   }, 1000);
 }
 
@@ -58,7 +62,6 @@ function showQuestion() {
         button.innerHTML = answers;
         button.classList.add('btn');
         responsesElement.append(button);
-        
     });
 }
 
@@ -73,21 +76,19 @@ console.log(event.target.innerHTML);
 var userChoice = event.target.innerHTML;
 var correctAnswer = questions[questionIndex].answer;
 if (userChoice === correctAnswer) {
-  alert("Correct")
+  var result = "Correct"
   nextQuestion()
 } else {
-  alert("Incorrect")
+  var result = "Incorrect"
   secondsLeft = secondsLeft - 10;
   nextQuestion()
 } 
 }
 
-function getScore() {
-  if (userChoice !== correctAnswer) {
-    
-  }
 
-}
+
+
+
 
 startButton.addEventListener("click", startQuiz);
 
