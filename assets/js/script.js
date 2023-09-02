@@ -7,6 +7,7 @@ var startButton = document.querySelector("#startbutton");
 var quizArea = document.querySelector("#quiz-area");
 var timer = document.querySelector("#timer");
 var score = document.querySelector("#score");
+var initials = document.querySelector("#initials");
 
 var questionIndex = 0;
 var score = 0;
@@ -30,9 +31,11 @@ function startQuiz() {
     timer.classList.remove("hide");
     showQuestion();
     setTime();
+    
   }
 
 function setTime() {
+  
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timer.textContent = secondsLeft + " Seconds Remaining.";
@@ -67,7 +70,14 @@ function showQuestion() {
 
 function nextQuestion() {
   questionIndex = questionIndex + 1;
-  showQuestion();
+  
+  if (questionIndex >= 4) {
+  quizArea.classList.add("hide");
+  console.log(secondsLeft)
+  secondsLeft.innerHTML = score
+  } else {
+    showQuestion();
+  }
 }
 
 function checkAnswer(event) {
@@ -76,10 +86,12 @@ console.log(event.target.innerHTML);
 var userChoice = event.target.innerHTML;
 var correctAnswer = questions[questionIndex].answer;
 if (userChoice === correctAnswer) {
-  var result = "Correct"
+  var result = "Correct";
+  alert("Correct");
   nextQuestion()
 } else {
-  var result = "Incorrect"
+  var result = "Incorrect";
+  alert("Incorrect");
   secondsLeft = secondsLeft - 10;
   nextQuestion()
 } 
